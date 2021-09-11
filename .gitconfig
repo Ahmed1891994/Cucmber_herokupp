@@ -1,0 +1,12 @@
+[user]
+	email = ahmedhakem189@yahoo.com
+	email = ahmedhakem189@gmail.com
+	name = Ahmed1891994
+	name = ahmed189
+[winUpdater]
+	recentlySeenVersion = 2.31.0.windows.1
+[core]
+	editor = C:/Program Files/Notepad++/notepad++.exe
+[filesystem "Oracle Corporation|1.8.0_291|-728435013"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 0 nanoseconds
