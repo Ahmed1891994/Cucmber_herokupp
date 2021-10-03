@@ -11,6 +11,7 @@ public class MultipleWindowsPage {
 	private final WebDriver driver;
 	private String original_window_handler;
 	private String Current_window_handler;
+	Iterator<String> LoopHandlers;
 	//private static int //windowposition = 0;
 
 	//private String[] allwindowhandlers = new String[50];
@@ -108,51 +109,24 @@ public class MultipleWindowsPage {
 	//##########################################################################################
 	public void SwitchtoNextWindow()
 	{
-		boolean flag = true;
 		String LoopHandler;
-		Iterator<String> LoopHandlers = driver.getWindowHandles().iterator();
+		LoopHandlers = driver.getWindowHandles().iterator();
 		while(LoopHandlers.hasNext())
 		{
 			LoopHandler = LoopHandlers.next();
 			for(String Windowhandler : driver.getWindowHandles())
 			{
-				System.out.println("LoopHandler:" + LoopHandler + "Windowhandler:" + Windowhandler);
 				if(!Windowhandler.equals(LoopHandler) && !Windowhandler.equals(original_window_handler))
-				{				
-					flag = false;
-				}
-				else
-				{
-					LoopHandlers.next();
-					continue;
-				}
-
-				if(!flag)
 				{
 					driver.switchTo().window(Windowhandler);
 					Current_window_handler = driver.getWindowHandle();
 					allwindowhandlers.add(Current_window_handler);
-					System.out.println("after Current_window_handler:" + Current_window_handler);
 					break;
 				}
-				else
-				{
-					continue;
-				}
+				else;
 			}
 
 		}
-		/*for(String Windowhandler : driver.getWindowHandles())
-		{
-			System.out.println(Windowhandler);
-		}
-		for(String handler : allwindowhandlers)
-		{
-			System.out.println(handler);
-		}
-		System.out.println("");*/
-		System.out.println("original" + original_window_handler);
-		System.out.println("current" + Current_window_handler);
 
 	}
 	//##########################################################################################

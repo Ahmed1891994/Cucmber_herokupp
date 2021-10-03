@@ -14,6 +14,6 @@ public class Hooks extends Testbase{
 	@After
 	public void Driver_Quit()
 	{
-		//Quit();
+		Quit();
 	}
 }

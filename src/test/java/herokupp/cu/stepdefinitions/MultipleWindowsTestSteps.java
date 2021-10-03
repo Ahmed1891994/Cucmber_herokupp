@@ -11,6 +11,8 @@ import herokupp.cu.util.Testbase;
 public class MultipleWindowsTestSteps extends Testbase{
 	MultipleWindowsPage multiplewindowspage;
 	
+	
+	
 	@When("user enters multiplewindowspage")
 	public void user_enters_multiplewindowspage()
 	{

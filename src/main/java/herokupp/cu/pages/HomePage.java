@@ -17,6 +17,7 @@ public class HomePage {
 	private By Dropdownlink = By.linkText("Dropdown");
 	private By Hoverslink = By.linkText("Hovers");
 	private By Multiple_Windows = By.linkText("Multiple Windows");
+	private By BrokenImages = By.linkText("Broken Images");
 	//Constructor to instantiate the driver
 	public HomePage(WebDriver driver)
 	{
@@ -64,5 +65,12 @@ public class HomePage {
 	{
 		driver.findElement(Multiple_Windows).click();
 		return new MultipleWindowsPage(driver);
+	}
+
+	//Click on brokenimages link
+	public BrokenImagesPage EnterBrokenImages()
+	{
+		driver.findElement(BrokenImages).click();
+		return new BrokenImagesPage(driver);
 	}
 }
